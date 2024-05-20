@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "RichTextEditorSample"
 include(":sample")
-include(":wysiwyg")
+include(":wysiwyg-android")
