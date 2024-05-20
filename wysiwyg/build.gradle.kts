@@ -57,7 +57,7 @@ dependencies {
 
 publishing {
     publications {
-        val mavenJava by creating(MavenPublication::class) {
+        creating(MavenPublication::class) {
             from(components["release"])
             groupId = "com.github.rmaprojects"
             artifactId = "wysiwyg-android"
