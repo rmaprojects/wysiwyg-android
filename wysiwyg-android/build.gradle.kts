@@ -61,7 +61,7 @@ publishing {
             from(components["release"])
             groupId = "com.github.rmaprojects"
             artifactId = "wysiwyg-android"
-            version = "1.0"
+            version = "1.1"
         }
     }
 }

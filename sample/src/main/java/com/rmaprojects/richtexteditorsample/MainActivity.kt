@@ -83,7 +83,9 @@ private fun Sample(
             )
             RichEditor(
                 state = richEditorState,
-                modifier = Modifier.fillMaxWidth().height(128.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(128.dp),
                 onTextChanged = {
 //                    Log.d("OUTPUT", richEditorState.output())
                 },
