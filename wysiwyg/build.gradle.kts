@@ -54,3 +54,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
+publishing {
+    publications {
+        val mavenJava by creating(MavenPublication::class) {
+            from(components["release"])
+            groupId = "com.github.rmaprojects"
+            artifactId = "wysiwyg-android"
+            version = "1.0"
+        }
+    }
+}
