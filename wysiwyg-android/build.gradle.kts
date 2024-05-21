@@ -62,7 +62,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.rmaprojects"
                 artifactId = "wysiwyg-android"
-                version = "1.2"
+                version = "1.3"
             }
         }
     }
