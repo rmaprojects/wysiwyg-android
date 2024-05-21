@@ -31,8 +31,8 @@ android {
         kotlinCompilerExtensionVersion = "1.5.5"
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -55,13 +55,15 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-publishing {
-    publications {
-        creating(MavenPublication::class) {
-            from(components["release"])
-            groupId = "com.github.rmaprojects"
-            artifactId = "wysiwyg-android"
-            version = "1.1"
+afterEvaluate {
+    publishing {
+        publications {
+            val mavenJava by creating(MavenPublication::class) {
+                from(components["release"])
+                groupId = "com.github.rmaprojects"
+                artifactId = "wysiwyg-android"
+                version = "1.2"
+            }
         }
     }
 }
